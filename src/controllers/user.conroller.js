@@ -16,6 +16,7 @@ export const getCourses = async (req, res) => {
 }
 
 export const enrollStudent = async (req, res) => {
+    const {student_name, course_id} = req.body;
     try {
         const {data, error} = await supabase
             .from('enrollments')
